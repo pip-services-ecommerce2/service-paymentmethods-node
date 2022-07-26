@@ -1,0 +1,9 @@
+/node_modules
+/npm-debug.log
+/.idea
+/data/payment_methods.test.json
+/data/payment_methods.json
+/obj/test
+/docker/id_rsa*
+/docker/.npmrc
+/package-lock.json

@@ -1,0 +1,24 @@
+{
+    "name": "service-paymentmethods-node",
+    "type": "microservice",
+    "language": "node",
+    "version": "1.0.0",
+    "build": 0,
+    "registry": "pipdevs",
+    "artifacts": [
+        {
+            "name": "<name>",
+            "tag": "latest",
+            "type": "docker"
+        },
+        {
+            "name": "<name>",
+            "tag": "<version>-<build>",
+            "type": "docker"
+        },
+        {
+            "name": "<name>",
+            "type": "npm"
+        }
+    ]
+}

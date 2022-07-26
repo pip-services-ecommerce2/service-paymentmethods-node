@@ -1,0 +1,63 @@
+{
+    "name": "service-paymentmethods-node",
+    "version": "1.0.0",
+    "author": "Conceptual Vision Consulting LLC",
+    "description": "Payment methods microservice in Node.js",
+    "contributors": [
+        {
+            "name": "Sergey Seroukhov",
+            "email": "seroukhov@gmail.com"
+        },
+        {
+            "name": "Danil Prisiazhnyi",
+            "email": "judas.priest999@gmail.com"
+        }
+    ],
+    "main": "./obj/src/index.js",
+    "typings": "./obj/src/index.d.ts",
+    "keywords": [
+        "pip.services",
+        "payment method",
+        "microservice"
+    ],
+    "noAnalyze": true,
+    "repository": {
+        "type": "git",
+        "url": "ssh://git@github.com:pip-services-ecommerce2/service-paymentmethods-node.git"
+    },
+    "license": "MIT",
+    "engines": {
+        "node": ">=14.0.0"
+    },
+    "private": false,
+    "scripts": {
+        "build": "tsc",
+        "watch": "tsc --watch",
+        "launch": "node run",
+        "relaunch": "tsc && node run",
+        "test": "mocha -t 30000 -R spec -u tdd --recursive ./obj/test",
+        "retest": "tsc && mocha -t 30000 -R spec -u tdd --recursive ./obj/test",
+        "benchmark": "matcha -R clean -I tdd ./obj/benchmark/run.js",
+        "rebenchmark": "tsc && matcha -R clean -I tdd ./obj/benchmark/run.js"
+    },
+    "dependencies": {
+        "paypal-rest-sdk": "*",
+        "pip-services3-aws-nodex": "^1.1.6",
+        "pip-services3-commons-nodex": "^1.0.*",
+        "pip-services3-components-nodex": "^1.4.*",
+        "pip-services3-container-nodex": "^1.0.*",
+        "pip-services3-data-nodex": "^1.0.*",
+        "pip-services3-mongodb-nodex": "^1.0.1",
+        "pip-services3-rpc-nodex": "^1.2.*",
+        "pip-services3-swagger-nodex": "^1.0.*",
+        "stripe": "8.69.0"
+    },
+    "devDependencies": {
+        "@types/chai": "*",
+        "@types/mocha": "*",
+        "@types/node": "*",
+        "chai": "*",
+        "mocha": "*",
+        "restify": "^4.3.0"
+    }
+}
